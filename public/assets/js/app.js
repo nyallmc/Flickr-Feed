@@ -46,14 +46,23 @@ function getImages(){
   hideContents();
   showLoading();
   clearContent();
+  //Check we have tags available before making an API request
   if (getTagsUri().length > 0) {
     $.getJSON("flickr.php", { tagUri: getTagsUri()}, function(response) {
       console.log(response);
-      $.each(response, function(i, item){
-        constructCard(item);
-      });
-      hideContents();
-      showContent();
+      // Response status of 1 means the api request was successful
+      if (response.status == 1) {
+        $.each(response.data, function(i, item){
+          constructCard(item);
+        });
+        hideContents();
+        showContent();
+      } else {
+        // if my php script detects an error the response status will be set to 0, meaning we show no results
+        hideContents();
+        showNoResults();
+      }
+
     });
   } else {
     hideContents();
