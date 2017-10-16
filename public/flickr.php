@@ -40,6 +40,8 @@
     if ( $jsonDecoded->items && count($jsonDecoded->items) > 0 ) {
       $response['error'] = null;
       $response['status'] = 1;
+      $resultsToShow = 12;
+      $i = 0;
       foreach ( $jsonDecoded->items as $item ) {
         // Construct an object containing relevant information to be returned on the web page, no need to include everything that isn't being used. By converting it into these objects instead of passing through the exact response I could add inputs from other sources that aren't just the flickr api.
         $item_details = array(
@@ -49,6 +51,10 @@
           "tags" => $item->tags
         );
         $response['data'][] = $item_details;
+        $i++;
+        if ($i == $resultsToShow) {
+          break;
+        }
       }
 
     } else {
