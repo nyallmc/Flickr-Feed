@@ -1,0 +1,90 @@
+.card-footer .badge {
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}
+body {
+  background: url("/assets/img/photography2X.png") repeat center center fixed;
+  background-size: 412px;
+}
+
+
+
+.card {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.search-form__input {
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.controls {
+  border: 1px solid rgba(0,0,0,.125);
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.card__image-link {
+  position: relative;
+}
+.card__image-link i {
+  position: absolute;
+  top: -50%;
+  left: 40%;
+  color: #e7e7e7 ;
+  display: none;
+}
+.card__image-link i:hover {
+ display: block;
+}
+.card__image-link img {
+  transition: opacity 0.3s;
+}
+.card__image-link img:hover {
+  opacity: 0.8;
+}
+.card__image-link img:hover + i {
+  display: block;
+  color: #e7e7e7 ;
+
+}
+.tags {
+  padding: 0;
+}
+.row {
+  margin: 0;
+}
+@media (min-width: 34em) {
+    .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media (min-width: 48em) {
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media (min-width: 62em) {
+    .card-columns {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
+}
+
+@media (min-width: 75em) {
+    .card-columns {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
+}

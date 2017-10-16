@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <title>Flickr Feed by Nyall McCurrach</title>
+    <link rel="canonical" href="http://nyall.romneycoast.co.uk/">
+    <meta name="description" content="Flickr feed with search functionality, by Nyall McCurrach"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/bootstrap-override.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container pt-5">
+        <h1>Flickr Feed by <small class="text-muted">Nyall McCurrach</small></h1>
+        <div class="controls my-5 p-4">
+          <div class="justify-content-center text-center">
+            <h2 class="mb-3">Search for images on flickr, filtered by tags.</h2>
+            <p>Enter a search term into the box below and press enter to filter your results by all the tags you have entered</p>
+            <div class="search-form">
+              <input type="text" class="search-form__input form-control js-search mb-3" placeholder="Type a tag and press enter" />
+            </div>
+            <ul class="tags js-tags">
+            </ul>
+        	</div>
+        </div>
+        <div class="js-contents">
+          <div class="row d-none js-cards-no-results controls p-4 text-center">
+            <h2 class="mx-auto">Oops! No results were found. Please try again!</h2>
+          </div>
+          <div class=" d-none card-columns js-cards-content">
+          </div>
+          <div class="row js-cards-loading">
+            <i class="fa fa-refresh fa-spin fa-3x fa-fw mx-auto"></i>
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- JS Code to be executed after the DOM has loaded -->
+    <script src="/assets/js/app.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <!-- Fancybox 3 CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+  </body>
+</html>
