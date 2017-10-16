@@ -8,14 +8,12 @@ $( document ).ready(function() {
   $(".js-search").on('keyup', function (e) {
     // keycode for enter key
     if (e.keyCode == 13) {
-      newTagVal = $(".js-search").val();
-      if (newTagVal.length > 0) {
-        newTag = '<li class="btn btn-light tag mr-1" data-tag="' + encodeURI(newTagVal) + '">' + newTagVal + ' <a href="" class="js-removeTag"><i class="fa fa-close"></i></a></li>';
-        $(".js-tags").append(newTag);
-        $(".js-search").val('');
-        getImages();
-      }
+      processTags();
     }
+  });
+
+  $(".js-addTag").click(function(e){
+    processTags();
   });
 
   $(".js-tags").on("click", ".js-removeTag", function(e){
@@ -32,6 +30,16 @@ $( document ).ready(function() {
 
 
 /*************** FUNCTIONS ************/
+
+function processTags() {
+  newTagVal = $(".js-search").val();
+  if (newTagVal.length > 0) {
+    newTag = '<li class="btn btn-light tag mr-1" data-tag="' + encodeURI(newTagVal) + '">' + newTagVal + ' <a href="" class="js-removeTag"><i class="fa fa-close"></i></a></li>';
+    $(".js-tags").append(newTag);
+    $(".js-search").val('');
+    getImages();
+  }
+}
 
 // Function to get recent images
 function getImages(){

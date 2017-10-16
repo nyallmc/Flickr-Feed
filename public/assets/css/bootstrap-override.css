@@ -57,6 +57,18 @@ body {
 .row {
   margin: 0;
 }
+.search-form__input {
+  display: inline-block;
+}
+.btn-success {
+  position: relative;
+  top: 6px;
+  right: 10px;
+
+}
+.btn-success:hover {
+  cursor: pointer;
+}
 @media (min-width: 34em) {
     .card-columns {
         -webkit-column-count: 2;
