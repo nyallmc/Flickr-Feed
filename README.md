@@ -1,4 +1,4 @@
 ### Contact ###
 
-Nyall McCurrach
-ny1001@romneycoast.co.uk
+* Nyall McCurrach
+* ny1001@romneycoast.co.uk
